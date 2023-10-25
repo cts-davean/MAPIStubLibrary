@@ -1957,7 +1957,7 @@ __ValidateParameters(METHODS eMethod, LPVOID ppThis);
 #define CheckParameters_IMAPIAdviseSink_OnNotify( a1, a2, a3 ) \
 			 CheckParameters3( IMAPIAdviseSink_OnNotify, a1, a2, a3 )
 
-#if defined(_AMD64_) || defined(_X86_)
+#if defined(_AMD64_) || defined(_X86_) || defined(_M_ARM) || defined(_M_ARM64)
 STDAPI	HrValidateParameters( METHODS eMethod, LPVOID FAR *ppFirstArg );
 #elif defined(DOS) || defined(_MAC)
 STDAPIV	HrValidateParametersV( METHODS eMethod, ... );

@@ -863,6 +863,8 @@ STDAPI_(VOID)			DeinitMapiUtil(VOID);
 #define szHrDispatchNotifications "HrDispatchNotifications"
 #elif defined (_WIN32) && defined (_X86_)
 #define szHrDispatchNotifications "_HrDispatchNotifications@4"
+#elif defined(_M_ARM) || defined(_M_ARM64)
+#define szHrDispatchNotifications "HrDispatchNotifications"
 #else
 #error	"Unknown Platform: MAPI is currently supported on Win32/X86 and Win64/AMD64"
 #endif
@@ -874,6 +876,8 @@ typedef DISPATCHNOTIFICATIONS FAR * LPDISPATCHNOTIFICATIONS;
 #define szScCreateConversationIndex "ScCreateConversationIndex"
 #elif defined (_WIN32) && defined (_X86_)
 #define szScCreateConversationIndex "_ScCreateConversationIndex@16"
+#elif defined(_M_ARM) || defined(_M_ARM64)
+#define szScCreateConversationIndex "ScCreateConversationIndex"
 #else
 #error	"Unknown Platform: MAPI is currently supported on Win32/X86 and Win64/AMD64"
 #endif
